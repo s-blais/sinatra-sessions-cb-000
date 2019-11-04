@@ -39,7 +39,7 @@ class App < Sinatra::Base
     session[:id]=1
 
     if session[:id] == 1
-      # "Session ID set. It's currently set to #{session[:id]}."
+      session.clear
       redirect '/fetch_session_id'
     else
       "Session ID has not been set!"
